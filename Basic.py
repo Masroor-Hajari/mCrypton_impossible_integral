@@ -116,7 +116,7 @@ def NibAnd(x: np.uint8, y: np.uint8) -> np.uint8:
 def NibXor(x: np.uint8, y: np.uint8) -> np.uint8:
     X = Int2Nib(x)
     Y = Int2Nib(y)
-    Z = (X + Y) % 2
+    Z = X ^ Y
     z = Nib2Int(Z)
     return z.astype(np.uint8)
 
